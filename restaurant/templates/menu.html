@@ -1,0 +1,11 @@
+<h1>Наше меню</h1>
+<div class="menu-grid">
+    {% for dish in dishes %}
+        <div class="dish-card">
+            <h3>{{ dish.name }}</h3>
+            <p>{{ dish.description }}</p>
+            <span>цена  {{ dish.price }} грн.</span>
+        </div>
+    {% endfor %}
+</div>
+<a href="{% url 'home' %}">ввернуться на главную</a>
